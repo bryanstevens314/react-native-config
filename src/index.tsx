@@ -1,9 +1,9 @@
 import { NativeModules } from 'react-native';
 
 type ConfigType = {
-  multiply(a: number, b: number): Promise<number>;
+  BUILD_ENV: String;
 };
 
-const { Config } = NativeModules;
+const { RNConfig } = NativeModules;
 
-export default Config as ConfigType;
+export default RNConfig as ConfigType;

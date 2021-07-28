@@ -4,10 +4,11 @@ import { StyleSheet, View, Text } from 'react-native';
 import Config from 'react-native-config';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<String | undefined>();
 
   React.useEffect(() => {
-    Config.multiply(3, 7).then(setResult);
+    console.log('BUILD_ENV ', Config);
+    setResult(Config.BUILD_ENV);
   }, []);
 
   return (
